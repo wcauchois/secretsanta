@@ -19,6 +19,11 @@ subcommands:
                        confirmation)
     email              Send out emails with secret santa assignments
 ```
+
+### Requirements
+
+Run `pip install requirements.txt` preferrably inside a virtualenv to get the needed libraries (as of this writing, just `boto`).
+
 ### Steps to Use
 
 1. Create a `names.txt` file with the names of everyone involved in the secret santa and optionally a `blacklist.txt` file (see "Files" below for more info).
