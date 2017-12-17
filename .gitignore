@@ -1,3 +1,5 @@
 names*.txt
 *.encrypted*
 sam-crew
+*blacklist.txt
+__pycache__

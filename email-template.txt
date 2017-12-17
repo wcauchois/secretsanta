@@ -1,0 +1,8 @@
+Hi {user_name},<br>
+<br>
+You have been assigned <strong>{target_name}</strong> as your secret santa.<br>
+<br>
+Please get them a gift and bring it to friendmas!<br>
+<br>
+See you there,<br>
+Bill/Christmasbot<br>
