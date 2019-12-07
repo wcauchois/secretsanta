@@ -62,7 +62,7 @@ def get_aws_credentials():
   if 'AWS_ACCESS_KEY_ID' in os.environ and 'AWS_SECRET_ACCESS_KEY' in os.environ:
     return (os.environ['AWS_ACCESS_KEY_ID'], os.environ['AWS_SECRET_ACCESS_KEY'])
   else:
-    aws_config_path = os.path.expanduser('~/.aws/config')
+    aws_config_path = os.path.expanduser('~/.aws/credentials')
     if not os.path.exists(aws_config_path):
       raise Exception('Could not locate AWS credentials via any method')
     config = configparser.RawConfigParser(allow_no_value=True)
@@ -73,8 +73,6 @@ def get_aws_credentials():
     )
 
 def send_emails(args):
-  config = configparser.RawConfigParser(allow_no_value=True)
-  config.readfp(open(aws_config_path, 'r'))
   (aws_access_key_id, aws_secret_access_key) = get_aws_credentials()
   conn = ses.connect_to_region('us-east-1',
     aws_access_key_id=aws_access_key_id,
